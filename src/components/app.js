@@ -26,7 +26,7 @@ export default class App extends Component {
       <div className={styles.root}>
         <SearchBar updateText={(song) => this.setState({ song: song })} fetchSongs={this.fetchSongs} />
         {tracks.items && <SongItem songData={tracks.items[songPosition]} />}
-        {tracks.items && <SongList listOfSongs={tracks.items} selectSong={(songPosition) => this.setState({ selectedTrack: songPosition })} />}
+        {tracks.items && <SongList listOfSongs={tracks.items} selectSong={(songPosition) => this.setState({ songPosition })} />}
       </div>
     );
   }
